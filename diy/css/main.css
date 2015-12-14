@@ -821,14 +821,15 @@ header .logo a {
 	padding: 0;
 	border: none;
 	outline: none;
-	font: 0/0 a;
+	/*font: 0/0 a;*/
+	font-weight: bold;
 	text-shadow: none;
-	color: transparent;
+	color: white;
 	width: 126px;
 	height: 12px;
 	background-repeat: no-repeat;
 	background-position: 0 0;
-	background-image: url("../images/logo.png");
+	/*background-image: url("../images/logo.png");*/
 }
 @media (-webkit-min-device-pixel-ratio:2), (min-resolution:192dpi) {
 	header .logo a {
@@ -1359,6 +1360,7 @@ hr {
 /* ------------------------------------------------------------------ */
 #hero-slider {
 	margin: 108px auto 30px;
+	min-height: 500px
 }
 #hero-slider .flex-caption {
 	margin: 0 15%;
