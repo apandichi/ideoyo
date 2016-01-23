@@ -185,30 +185,29 @@
       var contactSubject = $('#contactForm #contactSubject').val();
       var contactMessage = $('#contactForm #contactMessage').val();
 
-      var data = 'contactFname=' + contactFname  + '&contactLname=' + contactLname + 
-                 '&contactEmail=' + contactEmail + '&contactSubject=' + contactSubject + 
-                 '&contactMessage=' + contactMessage;
+      var data = 'name=' + contactFname  + ' ' + contactLname + 
+                 '&email=' + contactEmail + '&subject=' + contactSubject + 
+                 '&message=' + contactMessage + "&_next=/thank-you.html";
 
       $.ajax({
 
 	      type: "POST",
-	      url: "inc/sendEmail.php",
+	      url: "//formspree.io/hello@ideoyo.com", 
 	      data: data,
-	      success: function(msg) {
+	      success: function(done) {
 
-            // Message was sent
-            if (msg == 'OK') {
                $('#image-loader').fadeOut();
                $('#message-warning').hide();
                $('#contactForm').fadeOut();
+			   $('#message-success').html("Thank you!");   
                $('#message-success').fadeIn();   
-            }
-            // There was an error
-            else {
+
+	      },
+		  error: function(error) {
+
                $('#image-loader').fadeOut();
-               $('#message-warning').html(msg);
+               $('#message-warning').html("An error occured!");
 	            $('#message-warning').fadeIn();
-            }
 
 	      }
 
