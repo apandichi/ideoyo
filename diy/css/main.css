@@ -1999,3 +1999,26 @@ hr {
 .more-projects .portfolio-wrapper {
 	text-align: left;
 }
+
+/* */
+
+.brush {
+	font-family: brushstp;
+	font-size: 60px;
+}
+
+.hcenter {
+	text-align: center;
+	vertical-align: middle;
+	width: 75%%;
+    margin: 0 auto;
+}
+
+.arrow {
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  height: 130px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
