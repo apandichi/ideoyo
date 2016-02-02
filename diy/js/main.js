@@ -188,6 +188,13 @@
       var data = 'name=' + contactFname  + ' ' + contactLname + 
                  '&email=' + contactEmail + '&subject=' + contactSubject + 
                  '&message=' + contactMessage + "&_next=/thank-you.html";
+	 
+	 if (contactFname === "" || contactLname === "" || contactEmail === "" || contactSubject === "" || contactMessage === "") {
+		 $('#image-loader').fadeOut();
+		 $('#message-warning').html("Please fill in all the details!");
+		 $('#message-warning').fadeIn();
+		 return false;
+	 }
 
       $.ajax({
 
